@@ -81,9 +81,18 @@ def CC_triangle():
 #Donne des infos sur la triangulation
 def InfoCC():
 	print("J'ai trouvé {} triangles de pair de devise parmi {} différentes devises disponible sur Poloniex".format(len(CC_triangle()),len(listCCsolo())))
-
+	rep = input("Voulez-vous afficher ces triangles ?  (y/n) : ")
+	if rep == 'y':
+		print(CC_triangle())
+		rep2 = input("Voulez-vous afficher les devises triangulable ?  (y/n)")
+		if rep2 == 'y':
+			print(listCCsolo())
+	elif rep == 'n':
+		rep3 = input("Voulez-vous afficher les devises triangulable ?  (y/n)")
+		if rep3 == 'y':
+			print(listCCsolo())
+	
 #extraction des données du dico dans une liste	
-
 def lQuotes():
 	listQuotes = []
 	for k, v in MarketData.items():

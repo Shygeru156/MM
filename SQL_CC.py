@@ -7,6 +7,7 @@ import os
 import time
 from MM.triangleCC import *
 
+
 conn = sqlite3.connect('ma_base.db')
 cur = conn.cursor()
 
